@@ -41,11 +41,7 @@ set showmatch
 
 
 "nnoremap 
- $:<C-U>startinsert!<Enter>
-<ESC>, my failed complicated way
 " <C-U> clears everything in ex mode. A good way to sanitize thigns
-nnoremap 
- o<ESC>
 "count insert enter esc
 nnoremap ; :
 
@@ -61,10 +57,7 @@ inoremap <S-TAB> <C-D>
 
 inoremap ff <ESC>
 vnoremap ff <ESC>
-inoremap fj <ESC>
-vnoremap fj <ESC>
-inoremap jf <ESC>
-vnoremap jf <ESC>
+nnoremap ff <ESC>
 
 "remap tab key to switch between tabs
 "nnoremap <Tab> :<C-U> v:count1gt
