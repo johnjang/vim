@@ -1,6 +1,6 @@
 set number
 set ruler
-
+                                
 set tabstop=4
 set shiftwidth=4
 set backspace=2
@@ -84,27 +84,27 @@ set autochdir
 
 
 "Use tab as autoComplete, but a real tab will be place if previous/curr character is empty or previous or current line is /
-let output = ""
-function! Smart_TabComplete(back)
-    if (col('.')==1)
-        return "\<tab>"
-    endif
-    g:output = (getline('.')[col('.')]==' ')
-    if (getline('.')[col('.')]==' ')
-        if (a:back=='1')
-            return "\<c-p>"
-        endif
-        return "\<c-n>"
-    endif
+"let output = ""
+"function! Smart_TabComplete(back)
+"    if (col('.')==1)
+"        return "\<tab>"
+"    endif
+"    g:output = (getline('.')[col('.')]==' ')
+"    if (getline('.')[col('.')]==' ')
+"        if (a:back=='1')
+"            return "\<c-p>"
+"        endif
+"        return "\<c-n>"
+"    endif
+"
+"    if (a:back=='1')
+"        return "\<S-Tab>"
+"    endif
+"    return "\<Tab>"
+"
+"endfunction
 
-    if (a:back=='1')
-        return "\<S-Tab>"
-    endif
-    return "\<Tab>"
-
-endfunction
-
-inoremap <Tab> <c-r>=Smart_TabComplete(0)<CR>
-inoremap <S-Tab> <c-r>=Smart_TabComplete(1)<CR>
+"inoremap <Tab> <c-r>=Smart_TabComplete(0)<CR>
+"inoremap <S-Tab> <c-r>=Smart_TabComplete(1)<CR>
 
 
